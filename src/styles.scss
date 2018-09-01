@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+
+
+body {
+  background-color: #EEE;
+}
+
+.t-headline {
+  font-size: 20pt;
+  font-weight: normal;
+}
+
+.t-subheading {
+  font-size: 15pt;
+  font-weight: normal;
+}
+
+.t-field-labels {
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.t-place-holder-text {
+  font-size: 12pt;
+  font-weight: normal;
+}
+
+.t-tool-tip {
+  font-size: 11pt;
+  font-weight: normal;
+}
+
+.t-t-c {
+  font-size: 10pt;
+  font-weight: normal;
+}
+
+.t-page-title {
+  font-size: 23pt;
+  font-weight: normal;
+}
+
+.t-info-title {
+  font-size: 23pt;
+  font-weight: bold;
+}
+
+.t-hyperlinks {
+  font-size: 12pt;
+  text-decoration: underline;
+}
+
+.t-table-title {
+  font-size:  11pt;
+  font-weight: bold;
+}
+
+.t-document-title {
+  font-size: 11pt;
+  font-weight: normal;
+}
+
+
