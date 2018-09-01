@@ -9,44 +9,49 @@
 label {
   margin-bottom: 0; }
 
-.container-fluid body {
-  background-color: #EEEEE; }
-.container-fluid .t-headline {
+#form-content {
+  margin-top: -150px; }
+
+body {
+  background-color: #EEEEEE; }
+
+#container .t-headline {
   font-size: 20pt;
-  font-weight: normal; }
-.container-fluid .t-subheading {
+  font-weight: bold; }
+#container .t-subheading {
   color: #81A0AF;
   font-size: 15pt;
-  font-weight: normal; }
-.container-fluid .t-field-labels {
+  font-weight: normal;
+  text-transform: uppercase; }
+#container .t-field-labels {
   font-size: 12pt;
   font-weight: bold; }
-.container-fluid .t-place-holder-text {
+#container .t-place-holder-text {
   color: #81A0AF;
   font-size: 12pt;
   font-weight: normal; }
-.container-fluid .t-tool-tip {
+#container .t-tool-tip {
   font-size: 11pt;
   font-weight: normal; }
-.container-fluid .t-t-c {
+#container .t-t-c {
   font-size: 10pt;
   font-weight: normal; }
-.container-fluid .t-page-title {
+#container .t-page-title {
   font-size: 23pt;
   font-weight: normal; }
-.container-fluid .t-info-title {
+#container .t-info-title {
   font-size: 23pt;
   font-weight: bold; }
-.container-fluid .t-hyperlinks {
+#container .t-hyperlinks {
   color: #FF5F16;
   font-size: 12pt;
   text-decoration: underline; }
-.container-fluid .t-table-title {
+#container .t-table-title {
   color: #81A0AF;
   font-size: 11pt;
   font-weight: bold;
   text-transform: uppercase; }
-.container-fluid .t-document-title {
+#container .t-document-title {
   font-size: 11pt;
   font-weight: normal; }
 

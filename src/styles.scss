@@ -9,7 +9,7 @@ $brand-dark-blue: #2B2E50;
 $brand-light-grey: #81A0AF;
 $brand-dark-orange: #CB4000;
 $brand-light-orange: #FF5F16;
-$brand-grey: #EEEEE;
+$brand-grey: #EEEEEE;
 $brand-light-blue: rgba(43,46,80,0.5);
 
 * {
@@ -23,21 +23,28 @@ label {
   margin-bottom: 0;
 }
 
-.container-fluid {
+#form-content {
+  //background: yellow;
+  margin-top: -150px;
+}
 
-  body {
-    background-color: $brand-grey;
-  }
+
+body {
+  background-color: $brand-grey;
+}
+
+#container {
 
   .t-headline {
     font-size: 20pt;
-    font-weight: normal;
+    font-weight: bold;
   }
 
   .t-subheading {
     color: $brand-light-grey;
     font-size: 15pt;
     font-weight: normal;
+    text-transform: uppercase;
   }
 
   .t-field-labels {
@@ -88,6 +95,8 @@ label {
     font-size: 11pt;
     font-weight: normal;
   }
+
+
 
 }
 

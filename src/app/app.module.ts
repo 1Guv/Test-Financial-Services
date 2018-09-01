@@ -5,12 +5,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule} from "@angular/material";
+import {
+  MatButtonModule, MatCardModule, MatCheckboxModule, MatExpansionModule, MatFormFieldModule, MatIconModule, MatMenuModule
+} from "@angular/material";
+import { FormPersonalInformationComponent } from './form-personal-information/form-personal-information.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    FormPersonalInformationComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +25,10 @@ import {MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule} from "
     MatCheckboxModule,
     MatIconModule,
     MatMenuModule,
+    MatCardModule,
+    MatExpansionModule,
+    FormsModule,
+    MatFormFieldModule,
 
   ],
   providers: [],

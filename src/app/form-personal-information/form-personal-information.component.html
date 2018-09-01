@@ -1,0 +1,59 @@
+<div id="form-personal-information" class="row">
+  <div class="col-8 center-div">
+    <mat-card>
+      <mat-card-title class="text-center">
+        <h1 class="t-headline">Part 1 of 8</h1>
+        <h3 class="t-subheading">personal information</h3>
+        <p class="h6 t-t-c">Please fill in the main person 1st and any other persona(s) after.</p>
+        <p class="h6 t-t-c">By using the add person field at the bottom of the page.</p>
+        <hr class="w-25 mt-5">
+
+        <!--Used to show the added people on the form-->
+        <mat-accordion *ngIf="">
+          <div>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title class="t-field-labels">Mr John Richard Smith</mat-panel-title>
+              </mat-expansion-panel-header>
+
+              <mat-panel-description>
+                <div class="row">
+                  <h3 class="w-100 t-field-labels">TEL:</h3>
+                  <h3 class="w-100 t-field-labels">DOB:</h3>
+                  <h3 class="w-100 t-field-labels">EMAIL:</h3>
+                </div>
+              </mat-panel-description>
+            </mat-expansion-panel>
+          </div>
+        </mat-accordion>
+
+        <!--start of form-->
+        <div class="form-container text-center">
+          <form (ngSubmit)="onSubmit(personalInfoForm.form)" #personalInfoForm="ngForm" class="text-center">
+
+            <div>
+              <button mat-flat-button>Mr</button>
+              <button mat-flat-button>Mrs</button>
+              <button mat-flat-button>Miss</button>
+              <button mat-flat-button>Other</button>
+            </div>
+
+            <p>
+              <mat-form-field appearance="fill w-50">
+                <mat-label>Outline form field</mat-label>
+                <input matInput placeholder="Placeholder">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint>
+              </mat-form-field>
+            </p>
+
+          </form>
+        </div>
+
+      </mat-card-title>
+    </mat-card>
+  </div>
+</div>
+
+
+<!--<form (ngSubmit)="onSubmit(ticketForm.form)" #ticketForm="ngForm" class="text-center">-->
