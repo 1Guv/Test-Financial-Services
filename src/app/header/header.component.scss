@@ -1,0 +1,44 @@
+$brand-white: #FFFFFF;
+$brand-dark-blue: #2B2E50;
+$brand-light-grey: #81A0AF;
+
+#header-container {
+  background-color: $brand-dark-blue;
+  height: 400px;
+  top: 0px;
+
+  .logo {
+    background-color: $brand-light-grey;
+    color: $brand-white;
+    width: 290px;
+    font-size: 13pt;
+    font-weight: lighter;
+    padding: 10px;
+  }
+
+  button.mat-button:not(:first-child) {
+    color: $brand-white;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 10pt;
+  }
+
+  .profile-button {
+    color: $brand-white;
+    text-transform: capitalize;
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  //Remove Bootstrap outlines that don’t play nicely with Angular Material links and buttons
+  * {
+    &:active,
+    :focus {
+      outline: none !important;
+    }
+  }
+
+  label {
+    margin-bottom: 0;
+  }
+}

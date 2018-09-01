@@ -1,0 +1,21 @@
+<div id="header-container" class="row">
+  <div class="col-12 pl-0">
+    <nav>
+      <button mat-button class="logo">Testing Financial Services</button>
+      <button mat-button>Questionnaire</button>
+      <button mat-button>Tracking</button>
+      <button mat-button>Shared</button>
+      <button mat-button>Additional</button>
+      <div class="float-right profile-button">
+        John Doe
+        <button mat-icon-button [matMenuTriggerFor]="menu" class="">
+          <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Account</button>
+          <button mat-menu-item>Profile</button>
+        </mat-menu>
+      </div>
+    </nav>
+  </div>
+</div>

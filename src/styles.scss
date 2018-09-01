@@ -1,66 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+//@import "style-reset.scss";
 
+$brand-white: #FFFFFF;
+$brand-dark-blue: #2B2E50;
+$brand-light-grey: #81A0AF;
+$brand-dark-orange: #CB4000;
+$brand-light-orange: #FF5F16;
+$brand-grey: #EEEEE;
+$brand-light-blue: rgba(43,46,80,0.5);
 
-
-body {
-  background-color: #EEE;
+* {
+  &:active,
+  :focus {
+    outline: none !important;
+  }
 }
 
-.t-headline {
-  font-size: 20pt;
-  font-weight: normal;
+label {
+  margin-bottom: 0;
 }
 
-.t-subheading {
-  font-size: 15pt;
-  font-weight: normal;
+.container-fluid {
+
+  body {
+    background-color: $brand-grey;
+  }
+
+  .t-headline {
+    font-size: 20pt;
+    font-weight: normal;
+  }
+
+  .t-subheading {
+    color: $brand-light-grey;
+    font-size: 15pt;
+    font-weight: normal;
+  }
+
+  .t-field-labels {
+    font-size: 12pt;
+    font-weight: bold;
+  }
+
+  .t-place-holder-text {
+    color: $brand-light-grey;
+    font-size: 12pt;
+    font-weight: normal;
+  }
+
+  .t-tool-tip {
+    font-size: 11pt;
+    font-weight: normal;
+  }
+
+  .t-t-c {
+    font-size: 10pt;
+    font-weight: normal;
+  }
+
+  .t-page-title {
+    font-size: 23pt;
+    font-weight: normal;
+  }
+
+  .t-info-title {
+    font-size: 23pt;
+    font-weight: bold;
+  }
+
+  .t-hyperlinks {
+    color: $brand-light-orange;
+    font-size: 12pt;
+    text-decoration: underline;
+  }
+
+  .t-table-title {
+    color: $brand-light-grey;
+    font-size:  11pt;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .t-document-title {
+    font-size: 11pt;
+    font-weight: normal;
+  }
+
 }
 
-.t-field-labels {
-  font-size: 12pt;
-  font-weight: bold;
-}
 
-.t-place-holder-text {
-  font-size: 12pt;
-  font-weight: normal;
-}
-
-.t-tool-tip {
-  font-size: 11pt;
-  font-weight: normal;
-}
-
-.t-t-c {
-  font-size: 10pt;
-  font-weight: normal;
-}
-
-.t-page-title {
-  font-size: 23pt;
-  font-weight: normal;
-}
-
-.t-info-title {
-  font-size: 23pt;
-  font-weight: bold;
-}
-
-.t-hyperlinks {
-  font-size: 12pt;
-  text-decoration: underline;
-}
-
-.t-table-title {
-  font-size:  11pt;
-  font-weight: bold;
-}
-
-.t-document-title {
-  font-size: 11pt;
-  font-weight: normal;
-}
 
 

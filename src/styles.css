@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(~bootstrap/dist/css/bootstrap.css);
+@import url(~font-awesome/css/font-awesome.css);
+@import url(~@angular/material/prebuilt-themes/indigo-pink.css);
+*:active,
+* :focus {
+  outline: none !important; }
+
+label {
+  margin-bottom: 0; }
+
+.container-fluid body {
+  background-color: #EEEEE; }
+.container-fluid .t-headline {
+  font-size: 20pt;
+  font-weight: normal; }
+.container-fluid .t-subheading {
+  color: #81A0AF;
+  font-size: 15pt;
+  font-weight: normal; }
+.container-fluid .t-field-labels {
+  font-size: 12pt;
+  font-weight: bold; }
+.container-fluid .t-place-holder-text {
+  color: #81A0AF;
+  font-size: 12pt;
+  font-weight: normal; }
+.container-fluid .t-tool-tip {
+  font-size: 11pt;
+  font-weight: normal; }
+.container-fluid .t-t-c {
+  font-size: 10pt;
+  font-weight: normal; }
+.container-fluid .t-page-title {
+  font-size: 23pt;
+  font-weight: normal; }
+.container-fluid .t-info-title {
+  font-size: 23pt;
+  font-weight: bold; }
+.container-fluid .t-hyperlinks {
+  color: #FF5F16;
+  font-size: 12pt;
+  text-decoration: underline; }
+.container-fluid .t-table-title {
+  color: #81A0AF;
+  font-size: 11pt;
+  font-weight: bold;
+  text-transform: uppercase; }
+.container-fluid .t-document-title {
+  font-size: 11pt;
+  font-weight: normal; }
+
+/*# sourceMappingURL=styles.css.map */

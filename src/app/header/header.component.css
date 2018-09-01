@@ -1,0 +1,45 @@
+/*
+Error: Invalid US-ASCII character "\xE2"
+        on line 33 of header.component.scss
+
+28:     text-transform: capitalize;
+29:     font-size: 12px;
+30:     padding: 10px;
+31:   }
+32: 
+33:   //Remove Bootstrap outlines that don’t play nicely with Angular Material links and buttons
+34:   * {
+35:     &:active,
+36:     :focus {
+37:       outline: none !important;
+38:     }
+
+Backtrace:
+header.component.scss:33
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/util.rb:1048:in `rescue in block in find_encoding_error'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/util.rb:1045:in `block in find_encoding_error'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/util.rb:1044:in `each'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/util.rb:1044:in `each_with_index'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/util.rb:1044:in `find_encoding_error'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/util.rb:772:in `check_sass_encoding'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/engine.rb:444:in `check_encoding!'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/engine.rb:400:in `_to_tree'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/base.rb:52:in `parse'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/base.rb:19:in `parse!'
+/Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/bin/scss:13:in `<top (required)>'
+/Users/Guv/.rbenv/versions/2.3.1/bin/scss:23:in `load'
+/Users/Guv/.rbenv/versions/2.3.1/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid US-ASCII character \"\xE2\"\A         on line 33 of header.component.scss\A \A 28:     text-transform: capitalize;\A 29:     font-size: 12px;\A 30:     padding: 10px;\A 31:   }\A 32: \A 33:   //Remove Bootstrap outlines that don’t play nicely with Angular Material links and buttons\A 34:   * {\A 35:     &:active,\A 36:     :focus {\A 37:       outline: none !important;\A 38:     }"; }
