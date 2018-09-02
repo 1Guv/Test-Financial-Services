@@ -4,10 +4,6 @@
 #form-personal-information .form-container {
   display: flex;
   flex-direction: column; }
-#form-personal-information mat-icon {
-  background-color: #81A0AF;
-  width: 100% !important;
-  height: 100% !important; }
 #form-personal-information .no-gutters {
   margin-right: 0;
   margin-left: 0; }
@@ -15,6 +11,8 @@
   #form-personal-information .no-gutters > [class*="col-"] {
     padding-right: 0;
     padding-left: 0; }
+#form-personal-information .brand-border {
+  border: 2px solid #81A0AF; }
 #form-personal-information .required:after {
   content: " *"; }
 #form-personal-information .add-another-person {

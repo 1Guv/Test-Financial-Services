@@ -14,11 +14,11 @@ $brand-light-orange: #FF5F16;
     flex-direction: column;
   }
 
-  mat-icon {
-    background-color: $brand-light-grey;
-    width: 100% !important;
-    height: 100% !important;
-  }
+  //mat-icon {
+  //  background-color: $brand-light-grey;
+  //  width: 100% !important;
+  //  height: 100% !important;
+  //}
 
   .no-gutters {
     margin-right: 0;
@@ -31,8 +31,12 @@ $brand-light-orange: #FF5F16;
     }
   }
 
+  .brand-border {
+    border: 2px solid $brand-light-grey;
+  }
+
   .required:after {
-    content:" *";
+    content: " *";
   }
 
   .add-another-person {

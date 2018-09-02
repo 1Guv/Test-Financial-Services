@@ -34,15 +34,30 @@
           <form (ngSubmit)="onSubmit(personalForm.form)" #personalForm="ngForm" class="text-center">
 
 
-            <h3 class="t-field-labels text-left w-75 center-div">Title</h3>
+            <h3 class="t-field-labels text-left w-75 pb-2 center-div">Title</h3>
             <div class="w-75 center-div pb-5 rounded">
               <div class="row no-gutters">
-                <div class="col"><button class="w-100 p-2" mat-stroked-button>Mr</button></div>
-                <div class="col"><button class="w-100 p-2"mat-stroked-button>Mrs</button></div>
-                <div class="col"><button class="w-100 p-2"mat-stroked-button>Miss</button></div>
-                <div class="col"><button class="w-100 p-2"mat-stroked-button>Other</button></div>
+                <div class="col">
+                  <button class="w-100 p-2 brand-border active" mat-stroked-button>Mr</button>
+                </div>
+                <div class="col">
+                  <button class="w-100 p-2 brand-border" mat-stroked-button>Mrs</button>
+                </div>
+                <div class="col">
+                  <button class="w-100 p-2 brand-border" mat-stroked-button>Miss</button>
+                </div>
+                <div class="col">
+                  <button class="w-100 p-2 brand-border" mat-stroked-button>Other</button>
+                </div>
               </div>
             </div>
+
+
+            <!--<mat-radio-group class="title-radio-group" [(ngModel)]="chosenTitle$">-->
+            <!--<mat-radio-button class="title-radio-button" *ngFor="let title of titles$" [value]="title">-->
+            <!--{{title}}-->
+            <!--</mat-radio-button>-->
+            <!--</mat-radio-group>-->
 
             <h3 class="t-field-labels text-left w-75 center-div required">Name</h3>
             <mat-form-field appearance="outline" class="w-75 pb-5">
@@ -62,8 +77,12 @@
             <h3 class="t-field-labels text-left w-75 center-div required">Have you been known by any other names?</h3>
             <div class="w-75 center-div pb-5">
               <div class="row">
-                <div class="col"><button class="w-100 p-2" mat-stroked-button>NO</button></div>
-                <div class="col"><button class="w-100 p-2"mat-stroked-button>YES</button></div>
+                <div class="col">
+                  <button class="w-100 p-2" mat-stroked-button>NO</button>
+                </div>
+                <div class="col">
+                  <button class="w-100 p-2" mat-stroked-button>YES</button>
+                </div>
               </div>
             </div>
 
@@ -98,32 +117,50 @@
                      class="t-place-holder-text"
                      required>
               <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
-              <mat-error *ngIf="nationality.invalid && (nationality.dirty || nationality.touched)">Nationality is required</mat-error>
+              <mat-error *ngIf="nationality.invalid && (nationality.dirty || nationality.touched)">Nationality is
+                required
+              </mat-error>
             </mat-form-field>
 
             <h3 class="t-field-labels text-left w-75 center-div required">Right to reside?</h3>
             <div class="w-75 center-div pb-5">
               <div class="row">
-                <div class="col"><button class="w-100 p-2" mat-stroked-button>NO</button></div>
-                <div class="col"><button class="w-100 p-2"mat-stroked-button>YES</button></div>
+                <div class="col">
+                  <button class="w-100 p-2" mat-stroked-button>NO</button>
+                </div>
+                <div class="col">
+                  <button class="w-100 p-2" mat-stroked-button>YES</button>
+                </div>
               </div>
             </div>
 
             <h3 class="t-field-labels text-left w-75 center-div required">Marital status</h3>
             <div class="w-75 center-div pb-5">
               <div class="row no-gutters">
-                <div class="col"><button class="w-100 p-2" mat-stroked-button>Single</button></div>
-                <div class="col"><button class="w-100 p-2"mat-stroked-button>Married</button></div>
-                <div class="col"><button class="w-100 p-2"mat-stroked-button>Co-habiting</button></div>
-                <div class="col"><button class="w-100 p-2"mat-stroked-button>Other</button></div>
+                <div class="col">
+                  <button class="w-100 p-2" mat-stroked-button>Single</button>
+                </div>
+                <div class="col">
+                  <button class="w-100 p-2" mat-stroked-button>Married</button>
+                </div>
+                <div class="col">
+                  <button class="w-100 p-2" mat-stroked-button>Co-habiting</button>
+                </div>
+                <div class="col">
+                  <button class="w-100 p-2" mat-stroked-button>Other</button>
+                </div>
               </div>
             </div>
 
             <h3 class="t-field-labels text-left w-75 center-div required">Smoker?</h3>
             <div class="w-75 center-div pb-5">
               <div class="row">
-                <div class="col"><button class="w-100 p-2" mat-stroked-button>NO</button></div>
-                <div class="col"><button class="w-100 p-2"mat-stroked-button>YES</button></div>
+                <div class="col">
+                  <button class="w-100 p-2" mat-stroked-button>NO</button>
+                </div>
+                <div class="col">
+                  <button class="w-100 p-2" mat-stroked-button>YES</button>
+                </div>
               </div>
               <h3 class="t-tool-tip text-left pt-2">Please answer or your policy(s) may be void.</h3>
             </div>
@@ -140,9 +177,10 @@
                      class="t-place-holder-text"
                      required>
               <mat-hint class="t-tool-tip">Just in case we need to phone you.</mat-hint>
-              <mat-error *ngIf="phone_number.invalid && (phone_number.dirty || phone_number.touched)">Phone number is required.</mat-error>
+              <mat-error *ngIf="phone_number.invalid && (phone_number.dirty || phone_number.touched)">Phone number is
+                required.
+              </mat-error>
             </mat-form-field>
-
 
 
             <h3 class="t-field-labels text-left w-75 center-div required">Email address</h3>
@@ -154,6 +192,7 @@
                      name="email"
                      #email="ngModel"
                      placeholder="john.smith@thehappinesscompany.com"
+                     pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
                      class="t-place-holder-text"
                      required>
               <mat-hint class="t-tool-tip">This is the one you are registered with.</mat-hint>
@@ -165,7 +204,7 @@
                 <div class="col">
                   <button class="w-100 p-5 add-another-person rounded"
                           id="submit"
-
+                          type="submit"
                           mat-stroked-button>
                     <img src="assets\add person.svg"
                          class="w-100"
@@ -179,7 +218,7 @@
             </div>
 
             <!--<div class="w-50">-->
-              <!--<button [disabled]="!personalForm.valid" id="submit" type="submit" mat-raised-button class="">Submit</button>-->
+            <!--<button [disabled]="!personalForm.valid" id="submit" type="submit" mat-raised-button class="">Submit</button>-->
             <!--</div>-->
 
           </form>

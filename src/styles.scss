@@ -10,7 +10,7 @@ $brand-light-grey: #81A0AF;
 $brand-dark-orange: #CB4000;
 $brand-light-orange: #FF5F16;
 $brand-grey: #EEEEEE;
-$brand-light-blue: rgba(43,46,80,0.5);
+$brand-light-blue: rgba(43, 46, 80, 0.5);
 
 * {
   &:active,
@@ -27,7 +27,6 @@ label {
   //background: yellow;
   margin-top: -150px;
 }
-
 
 body {
   background-color: $brand-grey;
@@ -86,7 +85,7 @@ body {
 
   .t-table-title {
     color: $brand-light-grey;
-    font-size:  11pt;
+    font-size: 11pt;
     font-weight: bold;
     text-transform: uppercase;
   }

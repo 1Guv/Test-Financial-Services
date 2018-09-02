@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule, MatCardModule, MatCheckboxModule, MatDatepickerModule, MatExpansionModule, MatFormFieldModule,
   MatIconModule,
-  MatInputModule, MatMenuModule, MatNativeDateModule
+  MatInputModule, MatMenuModule, MatNativeDateModule, MatRadioModule
 } from "@angular/material";
 
 import { FormPersonalInformationComponent } from './form-personal-information/form-personal-information.component';
@@ -37,7 +37,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     MatDatepickerModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Form } from './form';
+import {Component, OnInit} from '@angular/core';
+import {Form} from './form';
 
 @Component({
   selector: 'app-form-personal-information',
@@ -11,10 +11,15 @@ export class FormPersonalInformationComponent implements OnInit {
   form = new Form();
   person$: Object;
 
-  constructor() { }
+  chosenTitle$: string;
+  titles$: string[] = ['Mr', 'Mrs', 'Miss', 'Other'];
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
+
 
   onSubmit(personalForm) {
 
