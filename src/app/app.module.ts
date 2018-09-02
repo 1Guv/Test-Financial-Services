@@ -6,7 +6,8 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
-  MatButtonModule, MatCardModule, MatCheckboxModule, MatExpansionModule, MatFormFieldModule, MatIconModule, MatMenuModule
+  MatButtonModule, MatCardModule, MatCheckboxModule, MatExpansionModule, MatFormFieldModule, MatIconModule,
+  MatInputModule, MatMenuModule
 } from "@angular/material";
 import { FormPersonalInformationComponent } from './form-personal-information/form-personal-information.component';
 import {FormsModule} from "@angular/forms";
@@ -29,6 +30,7 @@ import {FormsModule} from "@angular/forms";
     MatExpansionModule,
     FormsModule,
     MatFormFieldModule,
+    MatInputModule,
 
   ],
   providers: [],

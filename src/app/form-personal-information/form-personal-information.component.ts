@@ -21,7 +21,7 @@ export class FormPersonalInformationComponent implements OnInit {
       return;
     }
 
-    alert("Thanks for submitting a ticket! Data: " + JSON.stringify((this.form)))
+    alert("Form data: " + JSON.stringify((this.form)))
   }
 
 }

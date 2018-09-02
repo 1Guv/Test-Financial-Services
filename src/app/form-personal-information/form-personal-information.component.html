@@ -31,19 +31,56 @@
         <div class="form-container text-center">
           <form (ngSubmit)="onSubmit(personalInfoForm.form)" #personalInfoForm="ngForm" class="text-center">
 
-            <div>
-              <button mat-flat-button>Mr</button>
-              <button mat-flat-button>Mrs</button>
-              <button mat-flat-button>Miss</button>
-              <button mat-flat-button>Other</button>
-            </div>
+            <!--<div>-->
+              <!--<button mat-flat-button>Mr</button>-->
+              <!--<button mat-flat-button>Mrs</button>-->
+              <!--<button mat-flat-button>Miss</button>-->
+              <!--<button mat-flat-button>Other</button>-->
+            <!--</div>-->
 
             <p>
-              <mat-form-field appearance="fill w-50">
-                <mat-label>Outline form field</mat-label>
-                <input matInput placeholder="Placeholder">
-                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-                <mat-hint>Hint</mat-hint>
+              <mat-form-field appearance="outline" class="w-75">
+                <mat-label class="t-field-labels">Name</mat-label>
+                <input matInput
+                       id="name"
+                       [(ngModel)]="personalInfoForm.name"
+                       name="name"
+                       #name="ngModel"
+                       placeholder="John Reid Smith"
+                       class="t-place-holder-text"
+                       required>
+                <mat-error *ngIf="name.invalid && (name.dirty || name.touched)">Name is required</mat-error>
+                <mat-hint class="t-tool-tip">Please put spacing between all names (including middle)."</mat-hint>
+              </mat-form-field>
+            </p>
+
+            <p>
+              <mat-form-field appearance="outline" class="w-75">
+                <mat-label class="t-field-labels">Date of birth</mat-label>
+                <input matInput
+                       id="dob"
+                       [(ngModel)]="personalInfoForm.dob"
+                       name="dob"
+                       #dob="ngModel"
+                       placeholder="dd/mm/yyyy"
+                       class="t-place-holder-text"
+                       required>
+                <mat-error *ngIf="dob.invalid && (dob.dirty || dob.touched)">Date of birth is required</mat-error>
+              </mat-form-field>
+            </p>
+
+            <p>
+              <mat-form-field appearance="outline" class="w-75">
+                <mat-label class="t-field-labels">Email address</mat-label>
+                <input matInput
+                       id="email"
+                       [(ngModel)]="personalInfoForm.email"
+                       name="email"
+                       #email="ngModel"
+                       placeholder="john.smith@thehappinesscompany.com"
+                       class="t-place-holder-text"
+                       required>
+                <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">Date of birth is required</mat-error>
               </mat-form-field>
             </p>
 
