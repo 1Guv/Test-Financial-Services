@@ -9,6 +9,6 @@ export class Form {
     public marital_status?: string,
     public smoker?: boolean,
     public phone_number?: string,
-    public email?: string,
+    public email?: string
   ) {}
 }

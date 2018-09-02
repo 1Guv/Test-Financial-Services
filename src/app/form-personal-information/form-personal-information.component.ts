@@ -15,9 +15,11 @@ export class FormPersonalInformationComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(personalInfoForm) {
+  onSubmit(personalForm) {
 
-    if (!personalInfoForm.valid) {
+    console.log(this.form);
+
+    if (!personalForm.valid) {
       return;
     }
 

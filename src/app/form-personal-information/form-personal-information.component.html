@@ -29,7 +29,7 @@
 
         <!--start of form-->
         <div class="form-container text-center">
-          <form (ngSubmit)="onSubmit(personalInfoForm.form)" #personalInfoForm="ngForm" class="text-center">
+          <form (ngSubmit)="onSubmit(personalForm.form)" #personalForm="ngForm" class="text-center">
 
             <!--<div>-->
               <!--<button mat-flat-button>Mr</button>-->
@@ -43,7 +43,7 @@
                 <mat-label class="t-field-labels">Name</mat-label>
                 <input matInput
                        id="name"
-                       [(ngModel)]="personalInfoForm.name"
+                       [(ngModel)]="form.name"
                        name="name"
                        #name="ngModel"
                        placeholder="John Reid Smith"
@@ -59,7 +59,7 @@
                 <mat-label class="t-field-labels">Date of birth</mat-label>
                 <input matInput
                        id="dob"
-                       [(ngModel)]="personalInfoForm.dob"
+                       [(ngModel)]="form.dob"
                        name="dob"
                        #dob="ngModel"
                        placeholder="dd/mm/yyyy"
@@ -74,7 +74,7 @@
                 <mat-label class="t-field-labels">Email address</mat-label>
                 <input matInput
                        id="email"
-                       [(ngModel)]="personalInfoForm.email"
+                       [(ngModel)]="form.email"
                        name="email"
                        #email="ngModel"
                        placeholder="john.smith@thehappinesscompany.com"
@@ -84,6 +84,10 @@
               </mat-form-field>
             </p>
 
+            <div class="w-50">
+              <button [disabled]="!personalForm.valid" id="submit" type="submit" mat-raised-button class="">Submit</button>
+            </div>
+
           </form>
         </div>
 
@@ -91,6 +95,3 @@
     </mat-card>
   </div>
 </div>
-
-
-<!--<form (ngSubmit)="onSubmit(ticketForm.form)" #ticketForm="ngForm" class="text-center">-->
