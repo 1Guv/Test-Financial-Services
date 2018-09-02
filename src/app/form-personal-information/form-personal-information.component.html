@@ -9,10 +9,11 @@
         <hr class="w-25 mt-5">
 
         <!--Used to show the added people on the form-->
-        <mat-accordion *ngIf="">
-          <div>
-            <mat-expansion-panel>
+        <mat-accordion *ngIf="person$">
+          <div class="m-5">
+            <mat-expansion-panel class="card-border-left">
               <mat-expansion-panel-header>
+                <!--<mat-panel-title class="t-field-labels">Mr John Richard Smith</mat-panel-title>-->
                 <mat-panel-title class="t-field-labels">Mr John Richard Smith</mat-panel-title>
               </mat-expansion-panel-header>
 
@@ -25,68 +26,161 @@
               </mat-panel-description>
             </mat-expansion-panel>
           </div>
+          <!--<pre>{{ person$ | json }}</pre>-->
         </mat-accordion>
 
         <!--start of form-->
         <div class="form-container text-center">
           <form (ngSubmit)="onSubmit(personalForm.form)" #personalForm="ngForm" class="text-center">
 
-            <!--<div>-->
-              <!--<button mat-flat-button>Mr</button>-->
-              <!--<button mat-flat-button>Mrs</button>-->
-              <!--<button mat-flat-button>Miss</button>-->
-              <!--<button mat-flat-button>Other</button>-->
-            <!--</div>-->
 
-            <p>
-              <mat-form-field appearance="outline" class="w-75">
-                <mat-label class="t-field-labels">Name</mat-label>
-                <input matInput
-                       id="name"
-                       [(ngModel)]="form.name"
-                       name="name"
-                       #name="ngModel"
-                       placeholder="John Reid Smith"
-                       class="t-place-holder-text"
-                       required>
-                <mat-error *ngIf="name.invalid && (name.dirty || name.touched)">Name is required</mat-error>
-                <mat-hint class="t-tool-tip">Please put spacing between all names (including middle)."</mat-hint>
-              </mat-form-field>
-            </p>
-
-            <p>
-              <mat-form-field appearance="outline" class="w-75">
-                <mat-label class="t-field-labels">Date of birth</mat-label>
-                <input matInput
-                       id="dob"
-                       [(ngModel)]="form.dob"
-                       name="dob"
-                       #dob="ngModel"
-                       placeholder="dd/mm/yyyy"
-                       class="t-place-holder-text"
-                       required>
-                <mat-error *ngIf="dob.invalid && (dob.dirty || dob.touched)">Date of birth is required</mat-error>
-              </mat-form-field>
-            </p>
-
-            <p>
-              <mat-form-field appearance="outline" class="w-75">
-                <mat-label class="t-field-labels">Email address</mat-label>
-                <input matInput
-                       id="email"
-                       [(ngModel)]="form.email"
-                       name="email"
-                       #email="ngModel"
-                       placeholder="john.smith@thehappinesscompany.com"
-                       class="t-place-holder-text"
-                       required>
-                <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">Date of birth is required</mat-error>
-              </mat-form-field>
-            </p>
-
-            <div class="w-50">
-              <button [disabled]="!personalForm.valid" id="submit" type="submit" mat-raised-button class="">Submit</button>
+            <h3 class="t-field-labels text-left w-75 center-div">Title</h3>
+            <div class="w-75 center-div pb-5 rounded">
+              <div class="row no-gutters">
+                <div class="col"><button class="w-100 p-2" mat-stroked-button>Mr</button></div>
+                <div class="col"><button class="w-100 p-2"mat-stroked-button>Mrs</button></div>
+                <div class="col"><button class="w-100 p-2"mat-stroked-button>Miss</button></div>
+                <div class="col"><button class="w-100 p-2"mat-stroked-button>Other</button></div>
+              </div>
             </div>
+
+            <h3 class="t-field-labels text-left w-75 center-div required">Name</h3>
+            <mat-form-field appearance="outline" class="w-75 pb-5">
+              <mat-label class="t-field-labels">Name</mat-label>
+              <input matInput
+                     id="name"
+                     [(ngModel)]="form.name"
+                     name="name"
+                     #name="ngModel"
+                     placeholder="John Reid Smith"
+                     class="t-place-holder-text"
+                     required>
+              <mat-error *ngIf="name.invalid && (name.dirty || name.touched)">Name is required</mat-error>
+              <mat-hint class="t-tool-tip">Please put spacing between all names (including middle)."</mat-hint>
+            </mat-form-field>
+
+            <h3 class="t-field-labels text-left w-75 center-div required">Have you been known by any other names?</h3>
+            <div class="w-75 center-div pb-5">
+              <div class="row">
+                <div class="col"><button class="w-100 p-2" mat-stroked-button>NO</button></div>
+                <div class="col"><button class="w-100 p-2"mat-stroked-button>YES</button></div>
+              </div>
+            </div>
+
+            <h3 class="t-field-labels text-left w-75 center-div required">Date of birth</h3>
+            <mat-form-field appearance="outline" class="w-75">
+              <mat-label class="t-field-labels">Date of birth</mat-label>
+              <input matInput
+                     [matDatepicker]="picker"
+                     id="dob"
+                     [(ngModel)]="form.dob"
+                     name="dob"
+                     #dob="ngModel"
+                     placeholder="dd/mm/yyyy"
+                     class="t-place-holder-text"
+                     required>
+              <mat-datepicker-toggle matSuffix [for]="picker">
+                <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+              </mat-datepicker-toggle>
+              <mat-datepicker #picker startView="multi-year" [startAt]="startDate"></mat-datepicker>
+              <mat-error *ngIf="dob.invalid && (dob.dirty || dob.touched)">Date of birth is required</mat-error>
+            </mat-form-field>
+
+            <h3 class="t-field-labels text-left w-75 center-div required">Nationality</h3>
+            <mat-form-field appearance="outline" class="w-75">
+              <mat-label class="t-field-labels">Nationality</mat-label>
+              <input matInput
+                     id="nationality"
+                     [(ngModel)]="form.nationality"
+                     name="nationality"
+                     #nationality="ngModel"
+                     placeholder="British"
+                     class="t-place-holder-text"
+                     required>
+              <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+              <mat-error *ngIf="nationality.invalid && (nationality.dirty || nationality.touched)">Nationality is required</mat-error>
+            </mat-form-field>
+
+            <h3 class="t-field-labels text-left w-75 center-div required">Right to reside?</h3>
+            <div class="w-75 center-div pb-5">
+              <div class="row">
+                <div class="col"><button class="w-100 p-2" mat-stroked-button>NO</button></div>
+                <div class="col"><button class="w-100 p-2"mat-stroked-button>YES</button></div>
+              </div>
+            </div>
+
+            <h3 class="t-field-labels text-left w-75 center-div required">Marital status</h3>
+            <div class="w-75 center-div pb-5">
+              <div class="row no-gutters">
+                <div class="col"><button class="w-100 p-2" mat-stroked-button>Single</button></div>
+                <div class="col"><button class="w-100 p-2"mat-stroked-button>Married</button></div>
+                <div class="col"><button class="w-100 p-2"mat-stroked-button>Co-habiting</button></div>
+                <div class="col"><button class="w-100 p-2"mat-stroked-button>Other</button></div>
+              </div>
+            </div>
+
+            <h3 class="t-field-labels text-left w-75 center-div required">Smoker?</h3>
+            <div class="w-75 center-div pb-5">
+              <div class="row">
+                <div class="col"><button class="w-100 p-2" mat-stroked-button>NO</button></div>
+                <div class="col"><button class="w-100 p-2"mat-stroked-button>YES</button></div>
+              </div>
+              <h3 class="t-tool-tip text-left pt-2">Please answer or your policy(s) may be void.</h3>
+            </div>
+
+            <h3 class="t-field-labels text-left w-75 center-div required">Phone number</h3>
+            <mat-form-field appearance="outline" class="w-75 pb-5">
+              <mat-label class="t-field-labels">Phone number</mat-label>
+              <input matInput
+                     id="phone_number"
+                     [(ngModel)]="form.phone_number"
+                     name="phone_number"
+                     #phone_number="ngModel"
+                     placeholder="0759036938"
+                     class="t-place-holder-text"
+                     required>
+              <mat-hint class="t-tool-tip">Just in case we need to phone you.</mat-hint>
+              <mat-error *ngIf="phone_number.invalid && (phone_number.dirty || phone_number.touched)">Phone number is required.</mat-error>
+            </mat-form-field>
+
+
+
+            <h3 class="t-field-labels text-left w-75 center-div required">Email address</h3>
+            <mat-form-field appearance="outline" class="w-75 pb-5">
+              <mat-label class="t-field-labels">Email address</mat-label>
+              <input matInput
+                     id="email"
+                     [(ngModel)]="form.email"
+                     name="email"
+                     #email="ngModel"
+                     placeholder="john.smith@thehappinesscompany.com"
+                     class="t-place-holder-text"
+                     required>
+              <mat-hint class="t-tool-tip">This is the one you are registered with.</mat-hint>
+              <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">Email address is required</mat-error>
+            </mat-form-field>
+
+            <div class="w-75 center-div pb-5">
+              <div class="row">
+                <div class="col">
+                  <button class="w-100 p-5 add-another-person rounded"
+                          id="submit"
+
+                          mat-stroked-button>
+                    <img src="assets\add person.svg"
+                         class="w-100"
+                         alt="add another person"
+                         height="50px"
+                         width="50px"/>
+                    <h3 class="t-headline p-3">Add another person</h3>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!--<div class="w-50">-->
+              <!--<button [disabled]="!personalForm.valid" id="submit" type="submit" mat-raised-button class="">Submit</button>-->
+            <!--</div>-->
 
           </form>
         </div>

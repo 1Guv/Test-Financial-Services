@@ -5,12 +5,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import {
-  MatButtonModule, MatCardModule, MatCheckboxModule, MatExpansionModule, MatFormFieldModule, MatIconModule,
-  MatInputModule, MatMenuModule
+  MatButtonModule, MatCardModule, MatCheckboxModule, MatDatepickerModule, MatExpansionModule, MatFormFieldModule,
+  MatIconModule,
+  MatInputModule, MatMenuModule, MatNativeDateModule
 } from "@angular/material";
+
 import { FormPersonalInformationComponent } from './form-personal-information/form-personal-information.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import {FormsModule} from "@angular/forms";
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
 
   ],
   providers: [],

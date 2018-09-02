@@ -1,21 +1,21 @@
 /*
 Error: Invalid US-ASCII character "\xE2"
-        on line 33 of header.component.scss
+        on line 34 of header.component.scss
 
-28:     text-transform: capitalize;
-29:     font-size: 12px;
-30:     padding: 10px;
-31:   }
-32: 
-33:   //Remove Bootstrap outlines that don’t play nicely with Angular Material links and buttons
-34:   * {
-35:     &:active,
-36:     :focus {
-37:       outline: none !important;
-38:     }
+29:     text-transform: capitalize;
+30:     font-size: 12px;
+31:     padding: 10px;
+32:   }
+33: 
+34:   //Remove Bootstrap outlines that don’t play nicely with Angular Material links and buttons
+35:   * {
+36:     &:active,
+37:     :focus {
+38:       outline: none !important;
+39:     }
 
 Backtrace:
-header.component.scss:33
+header.component.scss:34
 /Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/util.rb:1048:in `rescue in block in find_encoding_error'
 /Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/util.rb:1045:in `block in find_encoding_error'
 /Users/Guv/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.1/lib/sass/util.rb:1044:in `each'
@@ -42,4 +42,4 @@ header.component.scss:33
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid US-ASCII character \"\xE2\"\A         on line 33 of header.component.scss\A \A 28:     text-transform: capitalize;\A 29:     font-size: 12px;\A 30:     padding: 10px;\A 31:   }\A 32: \A 33:   //Remove Bootstrap outlines that don’t play nicely with Angular Material links and buttons\A 34:   * {\A 35:     &:active,\A 36:     :focus {\A 37:       outline: none !important;\A 38:     }"; }
+  content: "Error: Invalid US-ASCII character \"\xE2\"\A         on line 34 of header.component.scss\A \A 29:     text-transform: capitalize;\A 30:     font-size: 12px;\A 31:     padding: 10px;\A 32:   }\A 33: \A 34:   //Remove Bootstrap outlines that don’t play nicely with Angular Material links and buttons\A 35:   * {\A 36:     &:active,\A 37:     :focus {\A 38:       outline: none !important;\A 39:     }"; }

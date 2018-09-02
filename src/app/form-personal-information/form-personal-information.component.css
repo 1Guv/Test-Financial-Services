@@ -4,5 +4,22 @@
 #form-personal-information .form-container {
   display: flex;
   flex-direction: column; }
+#form-personal-information mat-icon {
+  background-color: #81A0AF;
+  width: 100% !important;
+  height: 100% !important; }
+#form-personal-information .no-gutters {
+  margin-right: 0;
+  margin-left: 0; }
+  #form-personal-information .no-gutters > .col,
+  #form-personal-information .no-gutters > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0; }
+#form-personal-information .required:after {
+  content: " *"; }
+#form-personal-information .add-another-person {
+  border: dashed 1px black; }
+#form-personal-information .card-border-left {
+  border-left: 4px solid #FF5F16; }
 
 /*# sourceMappingURL=form-personal-information.component.css.map */

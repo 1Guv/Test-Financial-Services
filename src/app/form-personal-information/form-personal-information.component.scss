@@ -1,3 +1,7 @@
+$brand-light-grey: #81A0AF;
+$brand-dark-orange: #CB4000;
+$brand-light-orange: #FF5F16;
+
 #form-personal-information {
 
   .center-div {
@@ -9,4 +13,34 @@
     display: flex;
     flex-direction: column;
   }
+
+  mat-icon {
+    background-color: $brand-light-grey;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  .required:after {
+    content:" *";
+  }
+
+  .add-another-person {
+    border: dashed 1px black;
+  }
+
+  .card-border-left {
+    border-left: 4px solid $brand-light-orange;
+  }
+
 }

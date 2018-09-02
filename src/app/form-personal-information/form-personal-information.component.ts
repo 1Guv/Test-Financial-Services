@@ -9,6 +9,7 @@ import { Form } from './form';
 export class FormPersonalInformationComponent implements OnInit {
 
   form = new Form();
+  person$: Object;
 
   constructor() { }
 
@@ -19,9 +20,12 @@ export class FormPersonalInformationComponent implements OnInit {
 
     console.log(this.form);
 
-    if (!personalForm.valid) {
-      return;
-    }
+    // if (!personalForm.valid) {
+    //   return;
+    // }
+
+    this.person$ = this.form;
+    console.log('P>', this.person$);
 
     alert("Form data: " + JSON.stringify((this.form)))
   }
